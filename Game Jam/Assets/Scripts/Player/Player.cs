@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     public GameObject itemTemp;
     public GameObject weapon1;
     public GameObject weapon2;
+    public Rigidbody rigid;
 
     // Start is called before the first frame update
     void Start()
