@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class PlayerL : MonoBehaviour
 {
     public float Healt = 100f;
     public float speedWalk = 2.5f;
