@@ -1,0 +1,404 @@
+fileFormatVersion: 2
+guid: 39c5dbb1fef24d5478a8818e3587b711
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5777094239391201645
+    second: Acciones_Enemigo_01_0
+  - first:
+      213: 6708566591315349215
+    second: Acciones_Enemigo_01_1
+  - first:
+      213: -1580478332893780884
+    second: Acciones_Enemigo_01_2
+  - first:
+      213: 6222224253181768227
+    second: Acciones_Enemigo_01_3
+  - first:
+      213: -6921073247288515800
+    second: Acciones_Enemigo_01_4
+  - first:
+      213: -8803288433977234990
+    second: Acciones_Enemigo_01_5
+  - first:
+      213: 4445844091634560625
+    second: Acciones_Enemigo_01_6
+  - first:
+      213: -8420138823578466094
+    second: Acciones_Enemigo_01_8
+  - first:
+      213: -343748438478403780
+    second: Acciones_Enemigo_01_9
+  - first:
+      213: 8689185764183464636
+    second: Acciones_Enemigo_01_10
+  - first:
+      213: -3774367530466512645
+    second: Acciones_Enemigo_01_11
+  - first:
+      213: -6293367079198050679
+    second: Acciones_Enemigo_01_12
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_0
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 720
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d693ed43a9c5c2050800000000000000
+      internalID: 5777094239391201645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_1
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 718
+        width: 329
+        height: 239
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde876375cd991d50800000000000000
+      internalID: 6708566591315349215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_2
+      rect:
+        serializedVersion: 2
+        x: 802
+        y: 714
+        width: 329
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c642aa87453011ae0800000000000000
+      internalID: -1580478332893780884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 396
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32238b3ddf7c95650800000000000000
+      internalID: 6222224253181768227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 396
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823a8ee0d8863ff90800000000000000
+      internalID: -6921073247288515800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_5
+      rect:
+        serializedVersion: 2
+        x: 781
+        y: 396
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d96b75afcf64d580800000000000000
+      internalID: -8803288433977234990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_6
+      rect:
+        serializedVersion: 2
+        x: 1144
+        y: 396
+        width: 329
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ea5a075afc2bd30800000000000000
+      internalID: 4445844091634560625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_8
+      rect:
+        serializedVersion: 2
+        x: 1646
+        y: 466
+        width: 87
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8412d0a58a52b80800000000000000
+      internalID: -8420138823578466094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_9
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 85
+        width: 330
+        height: 253
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c374660dd92ca3bf0800000000000000
+      internalID: -343748438478403780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_10
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 87
+        width: 343
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba598d4a60369870800000000000000
+      internalID: 8689185764183464636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_11
+      rect:
+        serializedVersion: 2
+        x: 779
+        y: 89
+        width: 374
+        height: 149
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf076ce7ab0ce9bc0800000000000000
+      internalID: -3774367530466512645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Acciones_Enemigo_01_12
+      rect:
+        serializedVersion: 2
+        x: 1203
+        y: 104
+        width: 296
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98633433cf779a8a0800000000000000
+      internalID: -6293367079198050679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f35f2f4d15f3e7f49a6241183a457b58
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -26,8 +26,14 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
+    void Update(){
         
+        //player control limitada a eje X y Y solamente
+
+        //botones de habilidades, recoleccion y ataques
+
+        //boton de interaccion con objetos o salidas
+
+
     }
 }
