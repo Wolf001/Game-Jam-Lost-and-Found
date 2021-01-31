@@ -7,6 +7,7 @@ public class PlayerL : MonoBehaviour
     public float Healt = 100f;
     public float speedWalk = 2.5f;
     public float speedRun = 5f;
+    [SerializeField]
     public float jumpForce = 5f;
     public float evasion = 5f;
     public float checkRadious = 0.25f;
@@ -20,12 +21,14 @@ public class PlayerL : MonoBehaviour
     public GameObject weapon1;
     public GameObject weapon2;    
     public Transform FeetPos;
-    public LayerMask whatIsGround;
     public Camera PlayerCamera;
 
     private Rigidbody rigid;
     private bool isJumping;
+    [SerializeField]
+    private bool Grounded = false;
     private float jumpTimeCounter;
+    private LayerMask ground;
 
 
     // Start is called before the first frame update
@@ -72,8 +75,8 @@ public class PlayerL : MonoBehaviour
 
         }*/
         //salto con cambio de animacion
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Debug.Log("salto");
+        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
+            /*Debug.Log("salto");
             isJumping = true;
             jumpTimeCounter = jumpTime;
             rigid.velocity = Vector3.up * jumpForce;
@@ -90,9 +93,19 @@ public class PlayerL : MonoBehaviour
         }
 
         if (Input.GetKeyUp(KeyCode.Space)){
-            isJumping = false;
+            isJumping = false;*/
+
+            rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
+            Grounded = false;
         }
-        
+
+        //RaycastHit hitInf = Physics.Raycast(transform.position, Vector3.down, 1.0f, ground.value);
+        if(Physics.Raycast(transform.position, Vector3.down, 1.0f, 1 << 8) != null)
+        {
+            
+            Grounded = true;
+        }
+
         //botones de habilidades, recoleccion y ataques
         
 

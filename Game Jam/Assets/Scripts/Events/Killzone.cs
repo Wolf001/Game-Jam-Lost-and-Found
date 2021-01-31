@@ -17,7 +17,6 @@ public class Killzone : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
         
