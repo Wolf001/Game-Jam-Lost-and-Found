@@ -20,21 +20,27 @@ public class PlayerL : MonoBehaviour
     public GameObject itemTemp;
     public GameObject weapon1;
     public GameObject weapon2;    
-    public Transform FeetPos;
     public Camera PlayerCamera;
+    public Animator animat;
+    public Vector3 jumpAgain;
 
     private Rigidbody rigid;
-    private bool isJumping;
+
     [SerializeField]
     private bool Grounded = false;
-    private float jumpTimeCounter;
-    private LayerMask ground;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        rigid = GetComponent<Rigidbody>();   
+        rigid = GetComponent<Rigidbody>();
+        animat = GetComponent<Animator>();
+        jumpAgain = new Vector3(0.0f, 2.0f, 0.0f);
+    }
+
+    private void OnCollisionStay(Collision collision)
+    {
+        Grounded = true;
     }
 
     // Update is called once per frame
@@ -48,83 +54,42 @@ public class PlayerL : MonoBehaviour
         if (Input.GetKey(KeyCode.D)) {
             transform.eulerAngles = new Vector3(0, 0, 0);
             transform.position += transform.right * (Time.deltaTime * speedWalk);
+            animat.SetBool("walk", true);
             if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.C))
             {
                 transform.position += transform.right * (Time.deltaTime * speedRun);
+                animat.SetBool("walk", true);
             }
+        }else if(Input.GetKeyUp(KeyCode.D)){
+            animat.SetBool("walk", false);
         }
         //movimiento izquierda con cambio de animacion
         if (Input.GetKey(KeyCode.A)) {
             transform.eulerAngles = new Vector3(0, 180, 0);
             transform.position += transform.right * (Time.deltaTime * speedWalk);
+            animat.SetBool("walk", true);
+
             if ( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.C))
             {
                 transform.position += transform.right * (Time.deltaTime * speedRun);
+                animat.SetBool("walk", true);
             }
         }
-        //mirar hacia arriba con cambio de animacion
-       /* if (Input.GetKeyDown(KeyCode.UpArrow)) { 
-            
-            //se activa movimiento de camara hacia arriba
-        
-        }
-        //agacharse con cambio de animacion
-        if (Input.GetKeyDown(KeyCode.DownArrow)){
-
-            //se activa animacion agachado
-
-        }*/
-        //salto con cambio de animacion
-       // if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
-            /*Debug.Log("salto");
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rigid.velocity = Vector3.up * jumpForce;
-          gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 5f, 0f), ForceMode.Impulse);
-        }
-
-        if (Input.GetKey(KeyCode.Space) && isJumping == true){
-            if (jumpTimeCounter > 0) {
-                rigid.velocity = Vector3.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-            }else{
-                isJumping = false;
-            }
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space)){
-            isJumping = false;*/
-
-          //  rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
-          //  Grounded = false;
-      //  }
-
-        //RaycastHit hitInf = Physics.Raycast(transform.position, Vector3.down, 1.0f, ground.value);
-       /* if(Physics.Raycast(transform.position, Vector3.down, 1.0f, 1 << 8) != null)
+        else if (Input.GetKeyUp(KeyCode.A))
         {
-            
-            Grounded = true;
-        }*/
-
-        //botones de habilidades, recoleccion y ataques
-
-        if (Input.GetKeyDown(KeyCode.Space)) // if spacebar or up
-        {
-            print("key pressed!");
-            bool grounded = (Physics.Raycast((new Vector2(transform.position.x, transform.position.y - 1f)), Vector3.down, 2f, 1 << LayerMask.NameToLayer("Ground"))); // raycast down to look for ground is not detecting ground? only works if allowing jump when grounded = false; // return "Ground" layer as layer
-            Debug.DrawRay((new Vector3(transform.position.x, transform.position.y - 2f, transform.position.z)), Vector3.down, Color.green, 5);
-
-            if (grounded == true)
-            {
-                print("grounded!");
-                jump();
-            }
-            else if (grounded == false)
-            {
-                print("Can't Jump - Not Grounded");
-            }
+            animat.SetBool("walk", false);
         }
 
+         if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
+            rigid.AddForce(jumpAgain * jumpForce, ForceMode.Impulse);
+            Grounded = false;
+
+            
+        }
+        else if (Input.GetKeyUp(KeyCode.Space))
+        {
+            animat.SetBool("Jump", false);
+        }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -146,9 +111,4 @@ public class PlayerL : MonoBehaviour
 
     }
 
-    void jump()
-    {
-        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 5f, 0f), ForceMode.Impulse);
-        print("jump!");
-    }
 }
