@@ -1,7 +1,19 @@
 fileFormatVersion: 2
 guid: 4fbcf76262119424aa3429f68b10d435
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -578803773622767013
+    second: "la_morici\xF3n_1"
+  - first:
+      213: -2697264905054150136
+    second: "la_morici\xF3n_8"
+  - first:
+      213: 2835729472786571195
+    second: "la_morici\xF3n_9"
+  - first:
+      213: 5871869863939096522
+    second: "la_morici\xF3n_10"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -121,11 +133,95 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: "la_morici\xF3n_1"
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 131
+        width: 213
+        height: 380
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b523f86d80da7f7f0800000000000000
+      internalID: -578803773622767013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "la_morici\xF3n_8"
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 124
+        width: 311
+        height: 269
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 802ae1d0cd3619ad0800000000000000
+      internalID: -2697264905054150136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "la_morici\xF3n_9"
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 92
+        width: 304
+        height: 286
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf9c806ee88a5720800000000000000
+      internalID: 2835729472786571195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "la_morici\xF3n_10"
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 93
+        width: 371
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acf396fd7821d7150800000000000000
+      internalID: 5871869863939096522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 207a577ad27198c4f99053975d52a25c
     internalID: 0
     vertices: []
     indices: 

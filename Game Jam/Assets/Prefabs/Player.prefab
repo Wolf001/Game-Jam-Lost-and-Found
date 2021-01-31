@@ -391,8 +391,9 @@ MonoBehaviour:
   itemTemp: {fileID: 0}
   weapon1: {fileID: 741186252}
   weapon2: {fileID: 2117785237}
-  FeetPos: {fileID: 958000349}
   PlayerCamera: {fileID: 0}
+  animat: {fileID: 0}
+  jumpAgain: {x: 0, y: 0, z: 0}
   Grounded: 0
 --- !u!114 &1368381543447950967
 MonoBehaviour:
