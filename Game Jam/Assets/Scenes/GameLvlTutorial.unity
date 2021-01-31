@@ -455,6 +455,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &322056541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 322056543}
+  - component: {fileID: 322056542}
+  m_Layer: 0
+  m_Name: ProjectilesPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &322056542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322056541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bd539ff67f5161545a6ce032d487c07a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObjects: []
+  objectToPool: {fileID: 1695037521975909213, guid: ff79a51acb922be4ca37c69445304956,
+    type: 3}
+  amountToPool: 10
+--- !u!4 &322056543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322056541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &385984746 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2131436454407868766, guid: 9271b94d61bd9dd41a91e1f7c15eea4b,
@@ -529,7 +576,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 424084626}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -652,12 +699,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 451448326}
+  - component: {fileID: 451448332}
   - component: {fileID: 451448330}
   - component: {fileID: 451448329}
   - component: {fileID: 451448328}
   - component: {fileID: 451448327}
   - component: {fileID: 451448331}
-  - component: {fileID: 451448332}
+  - component: {fileID: 451448333}
   m_Layer: 0
   m_Name: EnemyIA
   m_TagString: Untagged
@@ -801,6 +849,23 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &451448333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 451448325}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35e12457f397b36449592b537a3e9f8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnRangeX: 0.5
+  spawnRangeY: 0.5
+  spawnRotation: {x: 0, y: 0, z: 0, w: 1}
+  startDelay: 0.1
+  spawnInterval: 1
 --- !u!1 &484874144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1824248870350634022, guid: 945b7887dfeeb574b80e8649944b6d87,
@@ -1764,7 +1829,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1328189237}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
