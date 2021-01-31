@@ -29,18 +29,41 @@ public class PlayerL : MonoBehaviour
     [SerializeField]
     private bool Grounded = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
         animat = GetComponent<Animator>();
         jumpAgain = new Vector3(0.0f, 2.0f, 0.0f);
+        transform.parent = null;
     }
 
     private void OnCollisionStay(Collision collision)
     {
-        Grounded = true;
+        if(collision.gameObject.tag == "Ground")
+        {
+            Grounded = true;
+
+        }
+        if (collision.gameObject.tag == "Platform")
+        {
+            Grounded = true;
+            transform.parent = collision.transform;
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            Grounded = false;
+
+        }
+        if (collision.gameObject.tag == "Platform")
+        {
+            Grounded = false;
+            transform.parent = null;
+        }
     }
 
     // Update is called once per frame
@@ -82,13 +105,19 @@ public class PlayerL : MonoBehaviour
 
          if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
             rigid.AddForce(jumpAgain * jumpForce, ForceMode.Impulse);
-            Grounded = false;
-
-            
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             animat.SetBool("Jump", false);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            animat.SetBool("attack", true);
+
+        }
+        else if (Input.GetKeyUp(KeyCode.Alpha1))
+        {
+            animat.SetBool("Attack", false);
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha2))

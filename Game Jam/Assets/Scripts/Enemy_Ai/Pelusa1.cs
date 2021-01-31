@@ -2,16 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Objective : MonoBehaviour
+public class Pelusa1 : Enemy1/*, Damage*/
 {
+
+    public int Healt { get; set; }
     // Start is called before the first frame update
-    void Start()
-    {
-        
+    public override void Init(){
+        //base.Init;
     }
 
     // Update is called once per frame
-    void Update()
+    public void damage()
     {
         
     }
