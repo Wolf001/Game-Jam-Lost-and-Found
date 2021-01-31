@@ -9,37 +9,28 @@ public class EnemyBehaviour : MonoBehaviour
     private AIDestinationSetter following;
     private Patrol patrolling;
     public float threatRange = 3.5f;
-    private SpawnManager spwnMgr;
+    private SpawnManager shooter;
 
     private void Start()
     {
         aiPath = GetComponent<AIPath>();
         following = GetComponent<AIDestinationSetter>();
         patrolling = GetComponent<Patrol>();
-        spwnMgr = GetComponent<SpawnManager>();
+        shooter = GetComponent<SpawnManager>();
     }
 
     private void FixedUpdate()
     {
         Vector3 vectorToPlayer = following.target.position - transform.position;
-        float temp_distance = (vectorToPlayer).magnitude;
+        float distanceFromPlayer = (vectorToPlayer).magnitude;
         Vector3 normVecToPlayer = vectorToPlayer.normalized;
-        spwnMgr.spawnRotation = Quaternion.LookRotation(normVecToPlayer, Vector3.up);
+        shooter.spawnRotation = Quaternion.LookRotation(normVecToPlayer, Vector3.up);
 
-        if (temp_distance > threatRange)
-        {
-            //patrolling
-            patrolling.enabled = true;
-            following.enabled = false;
-            spwnMgr.enabled = false;
-        }
-        else
-        {
-            //hunting
-            patrolling.enabled = false;
-            following.enabled = true;
-            spwnMgr.enabled = true;
-        }
+        bool isChasing = distanceFromPlayer <= threatRange;
+
+        patrolling.enabled = !isChasing;
+        following.enabled = isChasing;
+        shooter.enabled = isChasing;
 
         if (aiPath.desiredVelocity.x >= 0.01f)
         {
