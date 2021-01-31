@@ -81,7 +81,7 @@ public class PlayerL : MonoBehaviour
             transform.eulerAngles = new Vector3(0, 0, 0);
             transform.position += transform.right * (Time.deltaTime * speedWalk);
             animat.SetBool("walk", true);
-            if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.C))
+            if(Input.GetKey(KeyCode.D) && Input.GetKey(KeyCode.LeftShift))
             {
                 transform.position += transform.right * (Time.deltaTime * speedRun);
                 animat.SetBool("walk", true);
@@ -95,7 +95,7 @@ public class PlayerL : MonoBehaviour
             transform.position += transform.right * (Time.deltaTime * speedWalk);
             animat.SetBool("walk", true);
 
-            if ( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.C))
+            if ( Input.GetKey(KeyCode.A) && Input.GetKey(KeyCode.LeftShift))
             {
                 transform.position += transform.right * (Time.deltaTime * speedRun);
                 animat.SetBool("walk", true);
@@ -107,28 +107,34 @@ public class PlayerL : MonoBehaviour
         }
 
          if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
+            animat.SetBool("Jump", true);
             rigid.AddForce(jumpAgain * jumpForce, ForceMode.Impulse);
         }
         else if (Input.GetKeyUp(KeyCode.Space))
         {
             animat.SetBool("Jump", false);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            animat.SetBool("attack", true);
+            animat.SetBool("Attack", true);
 
         }
-        else if (Input.GetKeyUp(KeyCode.Alpha1))
+        else if (Input.GetKeyUp(KeyCode.E))
         {
             animat.SetBool("Attack", false);
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetKeyDown(KeyCode.R))
         {
-
+            animat.SetBool("Embestida", true);
+            transform.position += transform.right * (Time.deltaTime * speedRun);
 
         }
-        
+        else if (Input.GetKeyUp(KeyCode.R))
+        {
+            animat.SetBool("Embestida", false);
+        }
+
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
 

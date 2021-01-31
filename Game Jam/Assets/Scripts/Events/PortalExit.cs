@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PortalExit : MonoBehaviour
 {
     public Inventory inventory;
-
+    public string scene = "Main Title";
     void Start()
     {
         inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
@@ -13,11 +14,13 @@ public class PortalExit : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(scene);
+
         if (other.tag == "Player")
         {
             if(inventory.Key == true)
             {
-                Debug.Log("Open Portal");
+                SceneManager.LoadScene(scene);
             }
             else
             {
