@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class EnemyCollision : MonoBehaviour
 {
+    public EnemyBehaviour monsterIA;
     void OnCollisionEnter(Collision other)
     {
         Debug.Log(other.gameObject.name + " Hit" + this.gameObject.name);
-        gameObject.SetActive(false);
         if (other.gameObject.tag.Equals("Player"))
         {
-            //Kill Monster
-            Destroy(this.gameObject);
+            //damage Monster
+            monsterIA.life -= 1.0f;
         }
     }
 }

@@ -239,6 +239,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   threatRange: 10
+  monsterAnimation: {fileID: 6604172787981473998}
+  life: 1
+  isDead: 0
 --- !u!114 &3357091830223429880
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -246,7 +249,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3357091830223429872}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 35e12457f397b36449592b537a3e9f8e, type: 3}
   m_Name: 
@@ -254,8 +257,11 @@ MonoBehaviour:
   spawnRangeX: 0.5
   spawnRangeY: 0.5
   spawnRotation: {x: 0, y: 0, z: 0, w: 1}
-  startDelay: 0.1
+  startDelay: 0
   spawnInterval: 2
+  spawnAnimation: {fileID: 6604172787981473998}
+  spawnAnimationLength: 1
+  isSpawning: 0
 --- !u!114 &7162323835366169800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,6 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a560193778afa7e4cac3c2e62aadc68b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  monsterIA: {fileID: 3357091830223429886}
 --- !u!1 &3357091831362404247
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +459,12 @@ PrefabInstance:
 --- !u!4 &6604172787981473996 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8444378023699927674, guid: 1a6e1f808c681c04781553e7891d645c,
+    type: 3}
+  m_PrefabInstance: {fileID: 3357091829728152246}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &6604172787981473998 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8444378023699927672, guid: 1a6e1f808c681c04781553e7891d645c,
     type: 3}
   m_PrefabInstance: {fileID: 3357091829728152246}
   m_PrefabAsset: {fileID: 0}
