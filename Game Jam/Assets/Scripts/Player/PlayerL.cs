@@ -75,7 +75,7 @@ public class PlayerL : MonoBehaviour
 
         }*/
         //salto con cambio de animacion
-        if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
+       // if (Input.GetKeyDown(KeyCode.Space) && Grounded == true) {
             /*Debug.Log("salto");
             isJumping = true;
             jumpTimeCounter = jumpTime;
@@ -95,19 +95,36 @@ public class PlayerL : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space)){
             isJumping = false;*/
 
-            rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
-            Grounded = false;
-        }
+          //  rigid.velocity = new Vector3(rigid.velocity.x, jumpForce, 0);
+          //  Grounded = false;
+      //  }
 
         //RaycastHit hitInf = Physics.Raycast(transform.position, Vector3.down, 1.0f, ground.value);
-        if(Physics.Raycast(transform.position, Vector3.down, 1.0f, 1 << 8) != null)
+       /* if(Physics.Raycast(transform.position, Vector3.down, 1.0f, 1 << 8) != null)
         {
             
             Grounded = true;
-        }
+        }*/
 
         //botones de habilidades, recoleccion y ataques
-        
+
+        if (Input.GetKeyDown(KeyCode.Space)) // if spacebar or up
+        {
+            print("key pressed!");
+            bool grounded = (Physics.Raycast((new Vector2(transform.position.x, transform.position.y - 1f)), Vector3.down, 2f, 1 << LayerMask.NameToLayer("Ground"))); // raycast down to look for ground is not detecting ground? only works if allowing jump when grounded = false; // return "Ground" layer as layer
+            Debug.DrawRay((new Vector3(transform.position.x, transform.position.y - 2f, transform.position.z)), Vector3.down, Color.green, 5);
+
+            if (grounded == true)
+            {
+                print("grounded!");
+                jump();
+            }
+            else if (grounded == false)
+            {
+                print("Can't Jump - Not Grounded");
+            }
+        }
+
 
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
@@ -127,5 +144,11 @@ public class PlayerL : MonoBehaviour
 
         }
 
+    }
+
+    void jump()
+    {
+        gameObject.GetComponent<Rigidbody>().AddForce(new Vector3(0f, 5f, 0f), ForceMode.Impulse);
+        print("jump!");
     }
 }
