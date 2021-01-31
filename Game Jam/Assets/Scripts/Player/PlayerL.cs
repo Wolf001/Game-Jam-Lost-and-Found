@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerL : MonoBehaviour
 {
+    public delegate void OnKillzone();
+
     public float Healt = 100f;
     public float speedWalk = 2.5f;
     public float speedRun = 5f;
@@ -23,6 +25,7 @@ public class PlayerL : MonoBehaviour
     public Camera PlayerCamera;
     public Animator animat;
     public Vector3 jumpAgain;
+    public OnKillzone OnHitKillzone;
 
     private Rigidbody rigid;
 

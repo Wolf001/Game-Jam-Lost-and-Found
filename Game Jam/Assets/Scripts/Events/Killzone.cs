@@ -5,7 +5,9 @@ using UnityEngine;
 public class Killzone : MonoBehaviour
 {
 
-    private float fullDamage = 1000f;
+    
+
+    //private float fullDamage = 1000f; // comented while it isn't used
     // Start is called before the first frame update
     void Start()
     {
