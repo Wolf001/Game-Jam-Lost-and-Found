@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DetectCollisions : MonoBehaviour
+public class ProjectileCollision : MonoBehaviour
 {
     private GameManager gm;
     private void Start()

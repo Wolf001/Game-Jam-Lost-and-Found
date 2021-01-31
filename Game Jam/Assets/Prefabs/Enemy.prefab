@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3357091830223429874}
   - component: {fileID: 3357091830223429886}
   - component: {fileID: 3357091830223429880}
+  - component: {fileID: 7162323835366169800}
   m_Layer: 0
   m_Name: EnemyIA
   m_TagString: Untagged
@@ -254,7 +255,19 @@ MonoBehaviour:
   spawnRangeY: 0.5
   spawnRotation: {x: 0, y: 0, z: 0, w: 1}
   startDelay: 0.1
-  spawnInterval: 1
+  spawnInterval: 2
+--- !u!114 &7162323835366169800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3357091830223429872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a560193778afa7e4cac3c2e62aadc68b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3357091831362404247
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,7 +292,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3357091831362404247}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 104.80324, y: -7.352211, z: 157.1609}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3357091830223429875}
