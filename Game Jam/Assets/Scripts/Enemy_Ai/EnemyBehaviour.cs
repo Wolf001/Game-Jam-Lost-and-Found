@@ -28,12 +28,14 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (temp_distance > threatRange)
         {
+            //patrolling
             patrolling.enabled = true;
             following.enabled = false;
             spwnMgr.enabled = false;
         }
         else
         {
+            //hunting
             patrolling.enabled = false;
             following.enabled = true;
             spwnMgr.enabled = true;
